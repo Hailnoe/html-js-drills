@@ -22,15 +22,18 @@ function addName() {
   // - https://www.w3schools.com/jsref/prop_node_innertext.asp
 
   let nameElement = document.querySelector('#name');
-  nameElement.innerText = 'See script.js!';
+  nameElement.innerText = 'Trey Noe!';
 }
 
 function addFavoriteThings() {
-  console.log('Called addFavoriteThings()');
+  console.log('addFavoriteThings() ran');
 
   // 1. Get a reference to <ul id="favthings">
   // 2. Create a few list items representing your favorite things
   // 3. Add them to append them to favthings
+
+  let nameElement = document.querySelector('#favthings');
+  nameElement.textContent = 'Murica, Sports (football), and Video Games';
 
   // See:
   //   - https://htmldog.com/guides/javascript/advanced/creatingelements/
@@ -42,6 +45,10 @@ function replaceImage() {
   console.log('Called replaceImage()');
 
   // Change the puppy picture to a picture of your choosing
+  // Selecting the element
+  var link = document.getElementById("picture");
+	
+  link.setAttribute("src", "https://countercurrents.org/wp-content/uploads/2018/07/hammer-sickle.jpg");
 
   // See:
   // - https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom-get-set-attributes.php
@@ -54,6 +61,12 @@ function changeCodeStatus() {
   // 1. Get a reference to <div id="codestatus">
   // 2. Create image element containing a sweet ol' meme
   // 3. Replace text in codestatus w/ image
+  var contents = document.getElementById("codestatus").innerHTML;
+alert(contents); 
+
+var mainDiv = document.getElementById("codestatus");
+mainDiv.innerHTML = "<img src=https://gifimage.net/wp-content/uploads/2017/08/wow-meme-gif-5.gif></img>";
+  
 }
 
 // Get a reference to the button w/ id="show-info-button"
